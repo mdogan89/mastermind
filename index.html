@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="english">
+    <meta name="title" content="Mastermind">
+    <meta name="description" content="Play classical board game Mastermind online.">
+    <meta name="robots" content="index, follow">
+    <meta name="rating" content="safe for kids">
+    <meta name="copyright" content="Copyright 2023">
+    <meta name="format-detectiton" content="telephone=yes">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="author" content="mdogan89">
+    <meta name="copyright" content="Copyright 2023">
+
+    <meta property="og:title" content="Mastermind">
+    <meta property="og:description" content="Play classical board game Mastermind online.">
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:image" content="logo.png">
+	<meta property="og:url" content="#">
+	<meta property="og:site_name" content="Mastermind"> -->
+    <title>Mastermind</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1 class="collapsible">What is Mastermind?<svg class="chev" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                </svg></h1>
+            <article class="content">
+                <p>Mastermind or Master Mind is a code-breaking game for two players. It resembles an earlier pencil and
+                    paper game called Bulls and Cows that may date back a century.</p>
+                <img class="img1"
+                    src="https://media.wired.com/photos/5932d8ee4cd5ce6f96c0bbe8/3:2/w_1280%2Cc_limit/Box1.png" alt="">
+            </article>
+            <h1 class="collapsible">About the Game <svg class="chev" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                </svg></h1>
+            <article class="content col">
+                <p class="longerp">The game has several variations, but the basic rules are the same. Each turn, one
+                    player (codemaker)
+                    sets a secret code and the other player (codebreaker) tries to guess it. According to the accuracy
+                    of these guesses, the codemaker gives feedback. When the secret code is solved, the round ends and
+                    scoring is done.
+                </p>
+                <!-- <img class="img2" src="Mastermind.jpg" alt=""> -->
+            </article>
+            <h1 class="collapsible">How to Play? <svg class="chev" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                </svg></h1>
+            <article class="content">
+                <ol>
+                    <li> Pick a color from the <a href="#colours" onclick="focusColorboard()">color board</a> on the
+                        right and drop it into the <a href="#guess" onclick="focusGuess()">guessing area</a> at the
+                        bottom of the game board.
+                        <i> <a href="#row" onclick="focusCode()">Secret code</a> can contain the same color multiple
+                            times,
+                            but not spaces.</i>
+                        <i>You can change the colors you choose by repicking again before confirming your guess.</i>
+                    </li>
+                    <li>Make your guess with Play button</li>
+                    <li>Evaluate the Feedback <br>
+                        The codemaker will evaluate the pattern you gave in terms of order and color and will give
+                        you a feedback <a href="#" onclick="focusPins()"> here.</a>
+                        A peg of correct order and color is represented by a small red peg. However a small white peg
+                        indicates the existence of a correct color code peg placed in the wrong position.
+                        <i>The location of the pegs in this feedback is random.</i>
+                    </li>
+                    <li>Win the Game! <br>
+                        Four red pegs means you win the game.
+                        <i>Game has originally no hint system so you don't have to use it.</i>
+                        <i>You can challenge with yourself in terms of time and number of guesses.</i>
+                        <i> Guessing a number of five or less is better than most <a target="_blank"
+                                href="https://en.wikipedia.org/wiki/Mastermind_(board_game)"> algorithms.</a> </i>
+                    </li>
+                </ol>
+            </article>
+            <h1 class="collapsible">Examples <svg class="chev" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                </svg></h1>
+            <article class="content">
+                <img class="img3" src="examples.png" alt="">
+            </article>
+        </section>
+        <div class="playField">
+            <div>
+                <div id="question">
+                    <div id="row" class="row">
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <button id="hint" onclick="hint()">Hint</button>
+                    </div>
+                </div>
+                <div id="guesses">
+                    <div class="row">
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="res">
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="res">
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="res">
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="res">
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="res">
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="res">
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="res">
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="res">
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                            <div class="pin"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="guess">
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                </div>
+            </div>
+            <div id="colorBoard">
+                <div class="retry">
+                    <button id="retry" onclick="retry()">Retry</button>
+                </div>
+                <div id="colours">
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                </div>
+                <button id="sub" onclick="sub()">Play</button>
+            </div>
+        </div>
+    </main>
+    <div id="picker" class="ball"></div>
+    <script src="scripts.js" type="text/javascript"></script>
+</body>
+
+</html>

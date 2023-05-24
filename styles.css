@@ -1,0 +1,246 @@
+html,
+body,
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ccbcce;
+}
+
+h1,
+h2,
+p,
+li,
+span,
+a,
+* {
+    font-family: "Karla";
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chev {
+    width: 32px;
+    transition: 0.3s;
+}
+
+.active_svg {
+    fill: white;
+    rotate: 180deg;
+    transition: 0.3s;
+}
+
+h1:hover {
+    color: white;
+    fill: white;
+    transition: 0.3s;
+}
+
+.collapsible {
+    cursor: pointer;
+    width: 100%;
+}
+
+.active,
+.collapsible:hover {
+    color: white;
+    transition: 0.3s;
+}
+
+.img1 {
+    height: 135px;
+    align-self: center;
+    border-radius: 16px;
+}
+
+p {
+    line-height: 1.5;
+    width: 180px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    width: 860px;
+    margin: 30px 0px;
+}
+
+section {
+    width: 400px;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.longerp {
+    width: 90%;
+}
+
+ol {
+    margin-left: 20px;
+}
+
+li::marker {
+    font-weight: 900;
+}
+
+li {
+    line-height: 1.5;
+}
+
+li a {
+    color: white;
+}
+
+.img3 {
+    width: 400px;
+    border-radius: 16px;
+    height: 400px;
+}
+
+.playField {
+    background-color: #9b5035;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 1);
+    height: max-content;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    border-top: 2px solid rgba(105, 30, 53, 0.5);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.ball {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 3px;
+    box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 1);
+}
+
+#row {
+    border: none;
+    margin-bottom: 8px;
+}
+
+#question .ball {
+    opacity: 0;
+    transition: 1s;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: gray;
+    color: white;
+    border: none;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 1);
+    font-family: "Karla";
+    transition: 1s;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: black;
+    transition: 1s;
+}
+
+.retry {
+    height: 100%;
+}
+
+.res {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+    margin: 2px;
+}
+
+.pin {
+    width: 25px;
+    height: 25px;
+    background-color: grey;
+    border-radius: 50%;
+    box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 1);
+}
+
+#guess {
+    display: flex;
+    box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    width: 186px;
+    padding-top: 2px;
+}
+
+#sub {
+    height: 115px;
+    background-color: gray;
+    color: white;
+    border: none;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 1);
+    margin-top: 5px;
+    margin-bottom: 2px;
+    transition: 1s;
+}
+
+#sub:hover {
+    background-color: black;
+    transition: 1s;
+}
+
+#colorBoard {
+    display: flex;
+    flex-direction: column;
+}
+
+#colours {
+    box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    padding: 2px;
+    margin: 2px;
+}
+
+#colours .ball {
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 1);
+    margin-top: 8px;
+}
+
+#colours .ball:hover {
+    cursor: pointer;
+    scale: 1.1;
+    transition: 0.3s;
+}
+
+#picker {
+    position: absolute;
+    opacity: 0;
+}
