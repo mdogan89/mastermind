@@ -189,3 +189,18 @@ function retry() {
     location.reload()
 }
 
+/* Events fired on the drag target */
+
+document.addEventListener("drag", function (event) {
+    picker.style.backgroundColor = event.target.style.backgroundColor
+});
+
+/* Events fired on the drop target */
+document.addEventListener("dragover", function (event) {
+    event.preventDefault();
+});
+
+document.getElementById("guess").addEventListener("drop", function (event) {
+    event.preventDefault();
+    event.target.style.backgroundColor = picker.style.backgroundColor;
+});
