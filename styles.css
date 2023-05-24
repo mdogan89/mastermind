@@ -126,6 +126,7 @@ li a {
     display: flex;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 1);
     height: max-content;
+    width: max-content;
 }
 
 .row {
@@ -243,4 +244,24 @@ button:hover {
 #picker {
     position: absolute;
     opacity: 0;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        flex-direction: column-reverse;
+        width: 390px;
+        align-items: center;
+    }
+
+    section {
+        width: 370px;
+    }
+
+    .playField {
+        margin-bottom: 20px;
+    }
+
+    .img3 {
+        width: 360px;
+    }
 }
